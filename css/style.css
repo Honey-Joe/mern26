@@ -1,0 +1,28 @@
+/* *{
+    color: red;
+}
+
+h1{
+    color: blue;
+}
+
+.heading{
+    color: green;
+}
+
+#heading{
+    color: orange;
+} */
+
+.para{
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; */
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style:italic;
+  line-height: 50px;
+  text-decoration: underline dashed red;
+  text-align: center;
+  text-transform: uppercase;
+
+}
