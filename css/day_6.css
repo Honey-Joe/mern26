@@ -8,7 +8,7 @@ p{
     background-image: url(../Untitled.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 28px 50px;
     opacity: 1;
 }
 
@@ -23,10 +23,12 @@ p{
     padding-left: 10px;
     padding-right: 50px; */
 
-    border: 6px dashed #021850;
+    border: 6px dotted #203c82;
     border-radius: 30px;
+    /* border-bottom-left-radius: 20px; */
+    /* border-top-left-radius: 30px; */
 
-    margin: 50px;
+    margin-left: 50px;
 }
 
 
