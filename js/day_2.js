@@ -1,6 +1,6 @@
 arr  = [1,2,3,"hello",5]
 
-console.log(arr[3])
+console.log(arr[0])
 
 arr[2] = true 
 
@@ -9,7 +9,7 @@ arr.push("joe")
 arr.unshift(false)
 arr.pop()
 arr.shift()
-arr.splice()
+arr.splice(1 , 0 , "h")
 console.log(arr)
 
 //Object 

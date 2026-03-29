@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Method</title>
+</head>
+<body>
+    <p id="data"></p>
+    <p id="firstName"></p>
+</body>
+<script>
+    let dataHtml = document.getElementById("data");
+    let fn = document.getElementById("firstName");
+fetch("https://dummyjson.com/users").then((res)=>{
+    return res.json()
+}).then((data)=>{
+    dataHtml.textContent = data.users[0].firstName
+}).catch((err)=>{
+    console.log(err)
+})
+
+const fetchApi = async()=>{
+    try{
+        var res = await fetch("https://dummyjson.com/users");
+        var data = await res.json();
+        fn.textContent = data.users[0].lastName;
+    }catch(err){
+        console.log("error")
+    }
+    
+}
+
+fetchApi()
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="max-w-[100%]">
+      <div
+        class="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center py-5"
+      >
+        <div class="bg-red-500 flex justify-between">
+          <h1 class="font-bold">Logo</h1>
+          <div class="flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu lg:hidden" id="menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cross" class="lucide lucide-x-icon lucide-x hidden lg:hidden"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </div>
+        </div>
+        <div class="bg-green-500 hidden lg:block" id="navitem">
+          <ul
+            class="flex flex-col justify-center items-center lg:flex-row lg:justify-end gap-5 lg:gap-20"
+          >
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let menuBtn = document.getElementById("menu")
+    let crossBtn = document.getElementById("cross")
+    let navitem = document.getElementById("navitem")
+
+    menuBtn.addEventListener("click" , ()=>{
+        navitem.classList.remove("hidden")
+        menuBtn.classList.add("hidden")
+        crossBtn.classList.remove("hidden")
+    })
+
+    crossBtn.addEventListener("click" , ()=>{
+        menuBtn.classList.remove("hidden")
+        navitem.classList.add("hidden")
+        crossBtn.classList.add("hidden")
+        
+    })
+
+
+  </script>
+</html>

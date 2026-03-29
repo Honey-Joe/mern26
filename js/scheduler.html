@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center items-center flex-col h-screen gap-5">
+        <div>
+            <p id="count">0</p>
+        </div>
+        <div class="flex gap-5">
+            <button class="bg-green-500 px-5 py-2 rounded-lg" id="start">Start</button>
+            <button id="stop" class="bg-red-500 px-5 py-2 rounded-lg">Stop</button>
+            <button id="time" class="bg-blue-500 px-5 py-2 rounded-lg">Time</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    let startBtn = document.getElementById("start")
+    let stopBtn = document.getElementById("stop")
+    let timeBtn = document.getElementById("time")
+    let count = document.getElementById("count")
+
+    var setI 
+
+    startBtn.addEventListener("click" , ()=>{
+        setI = setInterval(()=>{
+            count.textContent = parseInt(count.textContent) + 1
+        } , 1000)
+    })
+
+    stopBtn.addEventListener("click" , ()=>{
+        clearInterval(setI)
+    })
+
+    timeBtn.addEventListener("click" ,()=>{
+        setTimeout(()=>{
+            alert("Overtime")
+            clearInterval(setI)
+        } , 5000)
+        // count.textContent = 0
+    } )
+
+</script>
+</html>
